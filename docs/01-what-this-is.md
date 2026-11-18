@@ -78,7 +78,7 @@ aggressive fan curve, applied by a small tool called LACT.
 With the reference profile, a 5-minute full-load test stays at **86 °C** and the
 card is stable. A repaste and better case airflow would still help, but they are
 not required to run it. The method and the reference values are in
-[undervolt/](undervolt/README.md); other cards need their own tuning.
+[undervolt/](../undervolt/README.md); other cards need their own tuning.
 
 ## The honest limitations (reference)
 
@@ -95,5 +95,5 @@ not required to run it. The method and the reference values are in
 
 The exact versions, commands, container configuration and tuning matrix are in
 [03 — Building it](03-building-it/README.md), [04 — Reference](04-reference/versions.md)
-and [undervolt/](undervolt/README.md). You do not need any of it to use the
+and [undervolt/](../undervolt/README.md). You do not need any of it to use the
 server.

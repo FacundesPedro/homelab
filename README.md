@@ -2,7 +2,8 @@
 
 | Path | What |
 |---|---|
-| `docs/` | documentation: plain-language guides, the build path, reference and the undervolt folder |
+| `docs/` | documentation: plain-language guides, the build path and reference |
+| `undervolt/` | GPU undervolt/overclock method, LACT config, burn test, results |
 | `proxmox/prox-2/` | prox-2: fresh PVE 9.2, no-subscription repos, 36 G root + 175 G thin pool, 468 G NVMe storage |
 | `proxmox/gpu-passthrough/` | prox-1: Strata LLM in an LXC with an RX 7900 XT |
 | `proxmox/strata-vm/` | prox-2: VM + VFIO attempt, reverted — kept as the reset-bug / pinned-RAM record |

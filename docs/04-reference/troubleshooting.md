@@ -68,7 +68,7 @@ reset or the whole box unresponsive.
   inside).
 - Wait for the card to cool before restarting.
 - Apply or re-check the undervolt and fan curve in
-  [`undervolt/`](../undervolt/README.md).
+  [`undervolt/`](../../undervolt/README.md).
 - If the card is already wedged, a cold power cycle is the only recovery. A
   smart plug plus "Restore on AC Power Loss = Power On" makes it remote.
 

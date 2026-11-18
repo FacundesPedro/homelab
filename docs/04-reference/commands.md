@@ -36,8 +36,8 @@ curl -s http://<CT_IP>:<PORT>/v1/models
 
 ```sh
 bash /root/strata-lxc/20-verify-strata.sh
-python3 docs/03-building-it/bench-prompt.py --url http://<CT_IP>:<PORT>/v1/chat/completions --target 8192
-python3 docs/03-building-it/bench-prompt.py --url http://<CT_IP>:<PORT>/v1/chat/completions --target 32768
+python3 proxmox/strata-lxc/bench-prompt.py --url http://<CT_IP>:<PORT>/v1/chat/completions --target 8192
+python3 proxmox/strata-lxc/bench-prompt.py --url http://<CT_IP>:<PORT>/v1/chat/completions --target 32768
 SAMPLES=30 INTERVAL=2 bash /root/strata-lxc/ram-monitor.sh
 bash /root/burn.sh                       # 30 s
 REPEAT=10 bash /root/burn.sh             # 5 min

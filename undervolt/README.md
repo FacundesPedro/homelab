@@ -35,7 +35,7 @@ worth doing, but the software profile is what makes the card usable.
   It must include `0xfff7ffff` (the `0x4000` bit is overdrive). Proxmox's stock
   value is often `0xfff7bfff`. Change it in `/etc/default/grub`, run
   `update-grub`, reboot. See
-  [10 — Host](../03-building-it/10-host.md#kernel-flags).
+  [10 — Host](../docs/03-building-it/10-host.md#kernel-flags).
 
 - Confirm the driver exposes the tuning interface:
 
@@ -186,13 +186,13 @@ it to the host once (the host has no repo checkout), then run it there; it uses
 the container's `hipcc` when the host has none:
 
 ```sh
-scp docs/undervolt/burn.sh root@<HOST_IP>:/root/burn.sh
+scp undervolt/burn.sh root@<HOST_IP>:/root/burn.sh
 ssh root@<HOST_IP>
 bash /root/burn.sh             # 30 s
 REPEAT=10 bash /root/burn.sh   # 5 min
 ```
 
-If the repository is already on the host, `bash docs/undervolt/burn.sh` works
+If the repository is already on the host, `bash undervolt/burn.sh` works
 the same way.
 
 Options (environment variables):

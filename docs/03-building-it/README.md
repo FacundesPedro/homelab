@@ -67,7 +67,7 @@ the GPU. A smaller model or a smaller quantization needs proportionally less.
 - LACT headless (`lactd`), the version matching your distro.
 - A voltage/fan profile that keeps the junction **below 90 °C** under sustained
   load. The reference profile and the full method are in
-  [`undervolt/`](../undervolt/README.md).
+  [`undervolt/`](../../undervolt/README.md).
 
 ### Client
 
@@ -84,7 +84,7 @@ the GPU. A smaller model or a smaller quantization needs proportionally less.
 4. Install LACT and apply a safe undervolt **before the first model load**. A
    stock blower card can hit its thermal limit in seconds and wedge.
 5. Run the burn test; require the junction **< 90 °C** over 5 minutes
-   ([`undervolt/`](../undervolt/README.md)).
+   ([`undervolt/`](../../undervolt/README.md)).
 6. Create the container ([20 — Container](20-strata-lxc.md)).
 7. Run `setup.sh`, pick the model, the context and the KV quantization; let it
    download and build.

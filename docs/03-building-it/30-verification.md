@@ -59,8 +59,8 @@ What healthy looks like:
 ## The prompt benchmark
 
 ```sh
-python3 docs/03-building-it/bench-prompt.py --url http://<CT_IP>:<PORT>/v1/chat/completions --target 8192
-python3 docs/03-building-it/bench-prompt.py --url http://<CT_IP>:<PORT>/v1/chat/completions --target 32768
+python3 proxmox/strata-lxc/bench-prompt.py --url http://<CT_IP>:<PORT>/v1/chat/completions --target 8192
+python3 proxmox/strata-lxc/bench-prompt.py --url http://<CT_IP>:<PORT>/v1/chat/completions --target 32768
 ```
 
 Reference results on a 20 GB RX 7900 XT with IQ3_S:
@@ -77,11 +77,11 @@ expert cache shrinks, and RAM stays flat.
 
 ## The GPU burn (after the undervolt)
 
-See [`undervolt/`](../undervolt/README.md). Acceptance: a **5-minute** burn with
+See [`undervolt/`](../../undervolt/README.md). Acceptance: a **5-minute** burn with
 the junction **< 90 °C** and no clock collapse.
 
 ```sh
-scp docs/undervolt/burn.sh root@<HOST_IP>:/root/burn.sh   # once
+scp undervolt/burn.sh root@<HOST_IP>:/root/burn.sh   # once
 bash /root/burn.sh             # 30 s
 REPEAT=10 bash /root/burn.sh   # 5 min
 ```

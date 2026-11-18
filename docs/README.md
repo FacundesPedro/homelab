@@ -16,7 +16,7 @@ you need.
 | use it (browser, OpenCode, API) | [02 — Using it](02-using-it.md) | plain language |
 | rebuild it from scratch | [03 — Building it](03-building-it/README.md) | technical |
 | fix something | [04 — Troubleshooting](04-reference/troubleshooting.md) | technical |
-| change the GPU voltage / fan / clocks | [`undervolt/`](undervolt/README.md) | technical |
+| change the GPU voltage / fan / clocks | [`undervolt/`](../undervolt/README.md) | technical |
 | look up a command | [04 — Commands](04-reference/commands.md) | reference |
 | look up the tested versions | [04 — Versions](04-reference/versions.md) | reference |
 
@@ -82,7 +82,7 @@ The full version list is in [04 — Versions](04-reference/versions.md).
 | Path | What |
 |---|---|
 | `docs/` | this documentation |
-| `docs/undervolt/` | GPU undervolt/overclock method, LACT config, burn test, results |
+| `undervolt/` | GPU undervolt/overclock method, LACT config, burn test, results |
 | `proxmox/strata-lxc/` | the reproducible scripts and the exhaustive runbook |
 | `proxmox/prox-2/` | the reference host build notes (PVE, storage, network) |
 | `proxmox/gpu-passthrough/` | an earlier container on a different host (same GPU) |
