@@ -1,0 +1,29 @@
+# Reference LACT profile (LACT 0.10.1, headless).
+#
+# Copy to /etc/lact/config.yaml, replace the GPU key with the one from
+# `lact cli list`, then: systemctl restart lactd
+#
+# The key format is vendor:device-subsystem_vendor:subsystem_device-pci.
+# This one is an RX 7900 XT at 0000:05:00.0 on the reference host.
+
+version: 7
+daemon:
+  log_level: info
+  disable_clocks_cleanup: false
+apply_settings_timer: 5
+gpus:
+  1002:744C-1849:5332-0000:05:00.0:
+    # PMFW drives the fan; do not enable a second LACT curve on top.
+    fan_control_enabled: false
+    pmfw_options:
+      acoustic_limit: 4950      # max RPM accepted by the driver
+      acoustic_target: 2500     # RPM target while temperatures are in range
+      minimum_pwm: 30           # never below 30%
+      target_temperature: 80    # PMFW regulates toward 80 C
+      zero_rpm: false           # keep air moving at idle
+    power_cap: 231             # W
+    max_core_clock: 2760       # MHz ceiling, not a fixed clock
+    voltage_offset: -100       # mV
+    performance_level: auto
+current_profile: null
+auto_switch_profiles: false
